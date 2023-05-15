@@ -45,6 +45,7 @@ body {
   list-style: none;
   padding: 0;
   justify-content: space-between;
+  align-items: center;
   width: 50%;
 }
 
@@ -55,6 +56,13 @@ body {
 .nav-item a {
   text-decoration: none;
   color: var(--dark-grayish-blue);
+}
+
+.nav-item:first-child a {
+  font-weight: bold;
+  font-size: 2rem;
+  color: #000;
+  text-transform: lowercase;
 }
 
 .nav-list-right {
