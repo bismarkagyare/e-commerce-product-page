@@ -46,7 +46,11 @@ body {
   padding: 0;
   justify-content: space-between;
   align-items: center;
-  width: 50%;
+  width: 60%;
+}
+
+.nav-item:nth-child(n + 2):nth-child(-n + 6) a {
+  margin-top: 0.4rem;
 }
 
 .nav-list-left li {
