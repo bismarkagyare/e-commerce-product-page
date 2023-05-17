@@ -81,3 +81,23 @@ ul .img-avatar {
   height: auto;
   object-fit: cover;
 }
+
+/* main styles */
+
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.preview-images {
+  display: flex;
+  gap: 1rem;
+}
+
+.preview-images img {
+  width: 150px;
+  height: auto;
+  object-fit: cover;
+}
