@@ -133,4 +133,32 @@ main {
   text-transform: capitalize;
   font-size: 2.8rem;
   font-weight: 800;
+  margin: 1rem 0;
+}
+
+.sneaker-msg {
+  font-size: 1.1rem;
+  color: var(--dark-grayish-blue);
+  line-height: 1.5;
+}
+
+.pricing {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+  align-items: center;
+}
+
+.pricing p:first-child {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.pricing p:nth-child(2) {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--orange-clr);
+  background-color: var(--pale-orange);
+  padding: 0.25rem;
+  border-radius: 5px;
 }
