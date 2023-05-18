@@ -121,6 +121,10 @@ main {
 
 /* product information  */
 
+.product-info {
+  margin-right: 2.5rem;
+}
+
 .company-name {
   text-transform: uppercase;
   font-weight: bold;
@@ -137,7 +141,7 @@ main {
 }
 
 .sneaker-msg {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--dark-grayish-blue);
   line-height: 1.5;
 }
@@ -161,4 +165,55 @@ main {
   background-color: var(--pale-orange);
   padding: 0.25rem;
   border-radius: 5px;
+}
+
+.btns {
+  display: flex;
+  gap: 1rem;
+}
+
+.btns button {
+  outline: none;
+  border: none;
+}
+
+.btns button:first-child {
+  background-color: var(--light-grayish-blue);
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.btns button:nth-child(2) {
+  background-color: var(--orange-clr);
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.add-to-cart img {
+  fill: #fff;
+}
+
+.btns .select-items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 35%;
+}
+
+.btns .add-to-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 65%;
+  cursor: pointer;
 }
