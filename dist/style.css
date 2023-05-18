@@ -167,6 +167,12 @@ main {
   border-radius: 5px;
 }
 
+.discount-price {
+  text-decoration: line-through;
+  margin-bottom: 1rem;
+  color: var(--grayish-blue);
+}
+
 .btns {
   display: flex;
   gap: 1rem;
