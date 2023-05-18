@@ -76,6 +76,11 @@ body {
   width: 10%;
 }
 
+.nav-list-right img:first-child:hover {
+  fill: black;
+  cursor: pointer;
+}
+
 ul .img-avatar {
   width: 40px;
   height: auto;
@@ -202,6 +207,10 @@ main {
   border-radius: 10px;
   font-weight: bold;
   color: #fff;
+}
+
+.btns button:nth-child(2):hover {
+  background-color: var(--pale-orange);
 }
 
 .add-to-cart img {
