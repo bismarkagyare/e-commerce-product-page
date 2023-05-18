@@ -199,7 +199,7 @@ main {
 }
 
 .add-to-cart img {
-  fill: #fff;
+  filter: brightness(0) invert(1);
 }
 
 .btns .select-items {
