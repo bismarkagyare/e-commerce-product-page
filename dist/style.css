@@ -87,6 +87,11 @@ ul .img-avatar {
   object-fit: cover;
 }
 
+ul .img-avatar:hover {
+  border-color: var(--orange-clr);
+  cursor: pointer;
+}
+
 /* main styles */
 
 main {
@@ -122,6 +127,7 @@ main {
   height: auto;
   object-fit: cover;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 /* product information  */
