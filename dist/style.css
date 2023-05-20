@@ -253,6 +253,10 @@ main {
   width: 35%;
 }
 
+.select-items img {
+  cursor: pointer;
+}
+
 .btns .add-to-cart {
   display: flex;
   align-items: center;
