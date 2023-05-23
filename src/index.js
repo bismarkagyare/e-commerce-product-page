@@ -4,16 +4,19 @@ const digit = document.querySelector('.select-items p');
 const addBtn = document.querySelector('.add-to-cart img');
 
 let count = 0;
+
 increaseBtn.addEventListener('click', () => {
   count++;
-  digit.textContent = count;
+  updateCount();
 });
 
 decreaseBtn.addEventListener('click', () => {
-  if (count === 0) {
-    digit.textContent = count;
-  } else {
+  if (count > 0) {
     count--;
-    digit.textContent = count;
+    updateCount();
   }
 });
+
+function updateCount() {
+  digit.textContent = count;
+}
