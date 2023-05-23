@@ -8,3 +8,12 @@ increaseBtn.addEventListener('click', () => {
   count++;
   digit.textContent = count;
 });
+
+decreaseBtn.addEventListener('click', () => {
+  if (count === 0) {
+    digit.textContent = count;
+  } else {
+    count--;
+    digit.textContent = count;
+  }
+});
