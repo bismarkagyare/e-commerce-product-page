@@ -29,4 +29,5 @@ function updateCount() {
 
 function displayCountInIcon() {
   iconSpan.textContent = count;
+  iconSpan.style.display = 'block';
 }
