@@ -91,11 +91,28 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 10%;
+  position: relative;
 }
 
 .icon-cart:hover {
   filter: brightness(0%);
   cursor: pointer;
+}
+
+.icon-span {
+  border-radius: 50%;
+  width: 23px;
+  height: 23px;
+  background: #ffa502;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #fff;
+  padding-top: 4px;
+  position: absolute;
+  top: -5px;
+  left: 10px;
+  z-index: 1;
+  display: none;
 }
 
 ul .img-avatar {
