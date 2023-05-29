@@ -4,6 +4,8 @@ const digit = document.querySelector('.select-items p');
 const addBtn = document.querySelector('.add-to-cart');
 // const cartIcon = document.querySelector('.icon-cart');
 const iconSpan = document.querySelector('.icon-span');
+const previewImages = document.querySelectorAll('.preview-images img');
+const productImage = document.querySelector('.big-img');
 
 let count = 0;
 
@@ -21,6 +23,13 @@ decreaseBtn.addEventListener('click', () => {
 
 addBtn.addEventListener('click', () => {
   displayCountInIcon();
+});
+
+previewImages.forEach((img) => {
+  img.addEventListener('click', () => {
+    const imageUrl = img.getAttribute('src');
+    productImage.setAttribute('src', imageUrl);
+  });
 });
 
 function updateCount() {
