@@ -239,8 +239,7 @@ main {
   border: none;
 }
 
-.btns button:first-child {
-  background-color: var(--light-grayish-blue);
+.btn {
   padding: 15px 25px;
   text-align: center;
   text-decoration: none;
@@ -249,14 +248,12 @@ main {
   font-weight: bold;
 }
 
+.btns button:first-child {
+  background-color: var(--light-grayish-blue);
+}
+
 .btns button:nth-child(2) {
   background-color: var(--orange-clr);
-  padding: 15px 25px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 1rem;
-  border-radius: 10px;
-  font-weight: bold;
   color: #fff;
 }
 
@@ -286,4 +283,60 @@ main {
   gap: 1rem;
   width: 65%;
   cursor: pointer;
+}
+
+/* popup container */
+
+.popup-container {
+  display: none;
+  width: 370px;
+  height: auto;
+  position: fixed;
+  top: 32%;
+  transform: translateY(-50%);
+  right: 150px;
+  z-index: 9999;
+  padding: 20px;
+  border-radius: 10px;
+  /* border: 1px solid gray; */
+  background: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.popup-content h2 {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+}
+
+.pop-img {
+  width: 60px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.popup-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.3rem 0;
+}
+
+.pop-msg p:first-child {
+  text-transform: capitalize;
+  color: var(--dark-grayish-blue);
+}
+
+.pop-msg p:nth-child(2) {
+  margin-top: 1rem;
+}
+
+.checkout {
+  background-color: var(--orange-clr);
+  color: #fff;
+  width: 100%;
+  font-size: 1.1rem;
+  text-transform: capitalize;
 }
