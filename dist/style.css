@@ -170,6 +170,11 @@ main {
   opacity: 60%;
 }
 
+.preview-images img.active {
+  opacity: 65%;
+  border: 2px solid var(--orange-clr);
+}
+
 /* product information  */
 
 .product-info {
