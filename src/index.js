@@ -25,11 +25,22 @@ addBtn.addEventListener('click', () => {
   displayCountInIcon();
 });
 
-previewImages.forEach((img) => {
+previewImages.forEach((img, index) => {
   img.addEventListener('click', () => {
     const imageUrl = img.getAttribute('src');
     productImage.setAttribute('src', imageUrl);
+
+    previewImages.forEach((otherImg) => {
+      if (otherImg !== img) {
+        otherImg.classList.remove('active');
+      }
+    });
+    img.classList.add('active');
   });
+
+  if (index === 0) {
+    img.classList.add('active');
+  }
 });
 
 function updateCount() {
