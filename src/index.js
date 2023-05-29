@@ -2,10 +2,11 @@ const decreaseBtn = document.querySelector('.minus');
 const increaseBtn = document.querySelector('.plus');
 const digit = document.querySelector('.select-items p');
 const addBtn = document.querySelector('.add-to-cart');
-// const cartIcon = document.querySelector('.icon-cart');
+const cartIcon = document.querySelector('.icon-cart');
 const iconSpan = document.querySelector('.icon-span');
 const previewImages = document.querySelectorAll('.preview-images img');
 const productImage = document.querySelector('.big-img');
+const popupContainer = document.querySelector('.popup-container');
 
 let count = 0;
 
@@ -40,6 +41,13 @@ previewImages.forEach((img, index) => {
 
   if (index === 0) {
     img.classList.add('active');
+  }
+});
+
+cartIcon.addEventListener('click', () => {
+  if (popupContainer) {
+    popupContainer.style.display =
+      popupContainer.style.display === 'none' ? 'block' : 'none';
   }
 });
 
