@@ -51,11 +51,11 @@ cartIcon.addEventListener('click', () => {
   }
 });
 
-function updateCount() {
+const updateCount = () => {
   digit.textContent = count;
-}
+};
 
-function displayCountInIcon() {
+const displayCountInIcon = () => {
   iconSpan.textContent = count;
   iconSpan.style.display = 'block';
-}
+};
