@@ -7,6 +7,7 @@ const iconSpan = document.querySelector('.icon-span');
 const previewImages = document.querySelectorAll('.preview-images img');
 const productImage = document.querySelector('.big-img');
 const popupContainer = document.querySelector('.popup-container');
+const popupContent = document.querySelector('.popup-content');
 
 let count = 0;
 
@@ -24,7 +25,6 @@ decreaseBtn.addEventListener('click', () => {
 
 addBtn.addEventListener('click', () => {
   displayCountInIcon();
-  updatePopupDisplay(count);
 });
 
 previewImages.forEach((img, index) => {
@@ -50,6 +50,7 @@ cartIcon.addEventListener('click', () => {
     popupContainer.style.display =
       popupContainer.style.display === 'none' ? 'block' : 'none';
   }
+  updatePopupDisplay();
 });
 
 const updateCount = () => {
@@ -61,17 +62,33 @@ const displayCountInIcon = () => {
   iconSpan.style.display = 'block';
 };
 
-const updatePopupDisplay = (quantity) => {
+const updatePopupDisplay = () => {
   const price = 125.0;
-  const totalAmount = price * quantity;
-  const popupQuantity = document.querySelector('.popup-info p span#quantity');
-  const popupTotal = document.querySelector('.popup-info p span#total');
+  const totalAmount = price * count;
 
-  if (popupQuantity && popupTotal) {
-    popupQuantity.textContent = quantity;
-    popupTotal.textContent = `$${totalAmount.toFixed(2)}`;
+  if (count === 0) {
+    popupContent.innerHTML = `
+      <h2>Cart</h2>
+      <p>Your cart is empty</p>
+    `;
+  } else {
+    const popupInfoHTML = `
+      <h2>Cart</h2>
+      <div class="popup-info">
+        <img class="pop-img" src="./images/image-product-1.jpg" alt="" />
+        <div class="pop-msg">
+          <p>Fall limited edition sneakers</p>
+          <p class="item-info">
+            <span class="item-price">$${price.toFixed(2)}</span> x
+            <span id="quantity">${count}</span> $
+            <span id="total">${totalAmount.toFixed(2)}</span>
+          </p>
+        </div>
+        <img src="./images/icon-delete.svg" class="popup-delete" alt="" />
+      </div>
+      <button class="btn checkout">checkout</button>
+    `;
 
-    popupQuantity.style.color = 'hsl(219, 9%, 45%)';
-    popupTotal.style.fontWeight = 'bold';
+    popupContent.innerHTML = popupInfoHTML;
   }
 };
