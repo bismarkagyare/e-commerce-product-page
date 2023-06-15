@@ -24,6 +24,7 @@ decreaseBtn.addEventListener('click', () => {
 
 addBtn.addEventListener('click', () => {
   displayCountInIcon();
+  updatePopupDisplay(count);
 });
 
 previewImages.forEach((img, index) => {
@@ -58,4 +59,19 @@ const updateCount = () => {
 const displayCountInIcon = () => {
   iconSpan.textContent = count;
   iconSpan.style.display = 'block';
+};
+
+const updatePopupDisplay = (quantity) => {
+  const price = 125.0;
+  const totalAmount = price * quantity;
+  const popupQuantity = document.querySelector('.popup-info p span#quantity');
+  const popupTotal = document.querySelector('.popup-info p span#total');
+
+  if (popupQuantity && popupTotal) {
+    popupQuantity.textContent = quantity;
+    popupTotal.textContent = `$${totalAmount.toFixed(2)}`;
+
+    popupQuantity.style.color = 'hsl(219, 9%, 45%)';
+    popupTotal.style.fontWeight = 'bold';
+  }
 };
