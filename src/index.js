@@ -69,7 +69,7 @@ const updatePopupDisplay = () => {
   if (count === 0) {
     popupContent.innerHTML = `
       <h2>Cart</h2>
-      <p>Your cart is empty</p>
+      <p class="empty-cart">Your cart is empty</p>
     `;
   } else {
     const popupInfoHTML = `
