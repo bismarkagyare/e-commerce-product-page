@@ -324,6 +324,10 @@ main {
   padding: 1.3rem 0;
 }
 
+.item-price {
+  color: var(--dark-grayish-blue);
+}
+
 .pop-msg p:first-child {
   text-transform: capitalize;
   color: var(--dark-grayish-blue);
