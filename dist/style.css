@@ -324,8 +324,13 @@ main {
   padding: 1.3rem 0;
 }
 
-.item-price {
+.item-price,
+#quantity {
   color: var(--dark-grayish-blue);
+}
+
+#total {
+  font-weight: bold;
 }
 
 .pop-msg p:first-child {
@@ -337,10 +342,19 @@ main {
   margin-top: 1rem;
 }
 
+.popup-container {
+  display: none;
+}
+
+.popup-delete {
+  cursor: pointer;
+}
+
 .checkout {
   background-color: var(--orange-clr);
   color: #fff;
   width: 100%;
   font-size: 1.1rem;
   text-transform: capitalize;
+  cursor: pointer;
 }
