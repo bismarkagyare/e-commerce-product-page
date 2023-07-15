@@ -11,47 +11,13 @@ const popupContent = document.querySelector('.popup-content');
 
 let count = 0;
 
-increaseBtn.addEventListener('click', () => {
-  count++;
-  updateCount();
-});
-
-decreaseBtn.addEventListener('click', () => {
-  if (count > 0) {
-    count--;
-    updateCount();
-  }
-});
-
-addBtn.addEventListener('click', () => {
-  displayCountInIcon();
-});
-
-previewImages.forEach((img, index) => {
-  img.addEventListener('click', () => {
-    const imageUrl = img.getAttribute('src');
-    productImage.setAttribute('src', imageUrl);
-
-    previewImages.forEach((otherImg) => {
-      if (otherImg !== img) {
-        otherImg.classList.remove('active');
-      }
-    });
-    img.classList.add('active');
-  });
-
-  if (index === 0) {
-    img.classList.add('active');
-  }
-});
-
-cartIcon.addEventListener('click', () => {
-  if (popupContainer) {
-    popupContainer.style.display =
-      popupContainer.style.display === 'none' ? 'block' : 'none';
-  }
-  updatePopupDisplay();
-});
+increaseBtn.addEventListener('click', handleIncrease);
+decreaseBtn.addEventListener('click', handleDecrease);
+addBtn.addEventListener('click', displayCountInIcon);
+previewImages.forEach((img, index) =>
+  img.addEventListener('click', () => handleImageClick(img, index))
+);
+cartIcon.addEventListener('click', handleCartIconClick);
 
 const updateCount = () => {
   digit.textContent = count;
@@ -59,7 +25,44 @@ const updateCount = () => {
 
 const displayCountInIcon = () => {
   iconSpan.textContent = count;
-  iconSpan.style.display = 'block';
+  iconSpan.style.display = count > 0 ? 'block' : 'none';
+};
+
+const handleIncrease = () => {
+  count++;
+  updateCount();
+};
+
+const handleDecrease = () => {
+  if (count > 0) {
+    count--;
+    updateCount();
+  }
+};
+
+const handleImageClick = (img, index) => {
+  const imageUrl = img.getAttribute('src');
+  productImage.setAttribute('src', imageUrl);
+
+  previewImages.forEach((otherImg) => {
+    if (otherImg !== img) {
+      otherImg.classList.remove('active');
+    }
+  });
+
+  img.classList.add('active');
+
+  if (index === 0) {
+    img.classList.add('active');
+  }
+};
+
+const handleCartIconClick = () => {
+  if (popupContainer) {
+    popupContainer.style.display =
+      popupContainer.style.display === 'none' ? 'block' : 'none';
+  }
+  updatePopupDisplay();
 };
 
 const updatePopupDisplay = () => {
